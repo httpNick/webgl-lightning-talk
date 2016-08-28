@@ -20,7 +20,7 @@ Code provided to run on the GPU is written in the form of shaders. Shaders are a
  
 ### Vertex
 
-![webglcoordsystem](https://github.com/httpNick/repository/webgl_coordinate_system.png)
+![webglcoordsystem](webgl_coordinate_system.png)
  - Coordinates of your program
  
 ### Fragment 
