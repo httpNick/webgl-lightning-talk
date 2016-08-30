@@ -39,7 +39,7 @@ function createVertices() {
     vertices = [
         -0.9, -0.9, 0.0,
          0.9, -0.9, 0.0,
-         0.0,  0.9, 0.0,
+         0.0,  0.9, 0.0
     ];
 
     var buffer = gl.createBuffer();
@@ -70,7 +70,7 @@ function createVertices() {
 }
 
 function draw() {
-    rotateX(angle += 0.01);
+    rotateZ(angle += 0.01);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
