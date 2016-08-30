@@ -65,7 +65,6 @@ void main(void) {
 Coloring of your program
 
 ```C
-precision mediump float;
 uniform vec4 color;
 void main(void) {
     gl_FragColor = color;
@@ -90,12 +89,40 @@ gl.uniform4f(color, 0, 0, 0, 1);
 
 ---
 
+Setting up a buffer for data to be drawn
+
+```Javascript
+vertices = [
+    -0.9, -0.9, 0.0,
+     0.9, -0.9, 0.0,
+     0.0,  0.9, 0.0
+];
+
+var buffer = gl.createBuffer();
+
+gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new Float32Array(vertices),
+  gl.STATIC_DRAW
+);
+```
+
+Rendering the triangle
+```Javascript
+gl.clear(gl.COLOR_BUFFER_BIT);
+gl.drawArrays(gl.TRIANGLES, 0, 3);
+```
+
+---
+
 Talking points
 
 - What are real-world usages of WebGL in the modern web space?
 - Why would you want to use SVG vs. WebGL?
 - Are there any Slalom projects that have used WebGL?
-  - Or a library like three.js which wraps it?
+  - Or a library like three.js (which is a WebGL wrapper)?
 
 ---
 
